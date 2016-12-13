@@ -1,0 +1,61 @@
+<DOC>
+<NUM>D001</NUM>
+<TEXT>
+Several types of queries are widely used on the World Wide Web and the expected retrieval method can vary depending on the query type.
+We propose a method for classifying queries into informational and navigational types.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D002</NUM>
+<TEXT>
+Because terms in navigational queries often appear in anchor text for links to other pages, we analyze the distribution of query terms in anchor texts on the Web for query classification purposes.
+While content-based retrieval is effective for informational queries, anchor-based retrieval is effective for navigational queries.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D003</NUM>
+<TEXT>
+Our retrieval system combines the results obtained with the content-based and anchor-based retrieval methods, in which the weight for each retrieval result is determined automatically depending on the result of the query classification.
+We also propose a method for improving anchor-based retrieval.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D004</NUM>
+<TEXT>
+Our retrieval method, which computes the probability that a document is retrieved in response to the given query, identifies synonyms of query terms in the anchor texts on the Web and uses these synonyms for smoothing purposes in the probability estimation.
+We use the NTCIR test collections and show the effectiveness of individual methods and the entire Web retrieval system experimentally.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D005</NUM>
+<TEXT>
+We propose a cross-media lecture-on-demand system, called Lodem, which searches a lecture video for specific segments in response to a text query.
+We utilize the benefits of text, audio, and video data corresponding to a single lecture.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D006</NUM>
+<TEXT>
+Lodem extracts the audio track from a target lecture video, generates a transcription by large-vocabulary continuous speech recognition, and produces a text index.
+A user can formulate text queries using the textbook related to the target lecture and can selectively view specific video segments by submitting those queries.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D007</NUM>
+<TEXT>
+Experimental results showed that by adapting speech recognition to the lecturer and the topic of the target lecture, the recognition accuracy was increased and consequently the retrieval accuracy was comparable with that obtained by human transcription.
+</TEXT>
+</DOC>
+
+<DOC>
+<NUM>D008</NUM>
+<TEXT>
+Lodem is implemented as a client-server system on the Web to facilitate e-learning.
+</TEXT>
+</DOC>
