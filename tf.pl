@@ -10,18 +10,21 @@ while($line=<>){
   	    $string = $string . "$now_doc $key $freq{$key}\n";
         delete($freq{$key});
   	}
-    $dec_cnt++;
-    $now_doc = $words[0];
-  }else{
+	$dec_cnt++;
 	$now_doc = $words[0];
-    if($words[1] =~ /\S{1}/ ){
-    	if(defined($freq{$words[1]})){
-    	    $freq{$words[1]}++;
-    	}else{
-    	    $freq{$words[1]} = 1;
-    	}
-    }
   }
+  $now_doc = $words[0];
+  if($words[1] =~ /\S{1}/ ){
+      if(defined($freq{$words[1]})){
+	  $freq{$words[1]}++;
+      }else{
+	  $freq{$words[1]}=1;
+      }
+  }
+}
+foreach $key ( sort { $freq{$b} <=>  $freq{$a} } keys %freq){
+    $string = $string . "$now_doc $key $freq{$key}\n";
+    delete($freq{$key});
 }
 $string = $dec_cnt."\n".$string;
 
